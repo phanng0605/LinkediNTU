@@ -154,7 +154,7 @@ export * from "./dateUtils";
 ```
 Then, in your other apps:
 ```js
-import { formatDate } from "@my-monorepo/shared-utils";
+import { formatDate } from "@LinkediNTU/shared-utils";
 ```
 
 ### 2. Shared UI Components (`packages/shared-ui`)
@@ -171,7 +171,7 @@ export { default as Button } from "./components/Button";
 ```
 Then, in the Next.js app:
 ```js
-import { Button } from "@my-monorepo/shared-ui";
+import { Button } from "@LinkediNTU/shared-ui";
 ```
 
 ---
