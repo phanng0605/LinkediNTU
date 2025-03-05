@@ -1,0 +1,64 @@
+# ----------------------------------------------------------------
+#  Node / Yarn / PNPM / Logs
+# ----------------------------------------------------------------
+node_modules/
+*.log
+yarn-error.log
+pnpm-lock.yaml
+.npmrc
+.pnp.*
+.pnp-cache/
+
+# ----------------------------------------------------------------
+#  Build outputs (Node, Next.js)
+# ----------------------------------------------------------------
+dist/
+build/
+.next/
+.out/
+.nyc_output/
+
+# ----------------------------------------------------------------
+#  Environment files
+# ----------------------------------------------------------------
+.env
+.env.* 
+# If using dotenv files in each app/package: 
+# .env.local
+# .env.development
+# .env.production
+# etc.
+
+# ----------------------------------------------------------------
+#  OS / Editor-specific
+# ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# ----------------------------------------------------------------
+#  Python-specific
+# ----------------------------------------------------------------
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+pytest_cache/
+*.pkl
+*.pyc
+
+# ----------------------------------------------------------------
+#  Lock/Dependency Files
+# ----------------------------------------------------------------
+# If you have a root-level lock file, keep it to ensure consistent installs.
+# But you may ignore lock files in sub-packages if you rely on a single workspace lock file.
+# e.g., 
+# package-lock.json
+# yarn.lock
+
