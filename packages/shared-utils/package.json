@@ -1,0 +1,16 @@
+{
+  "name": "@LinkediNTU/shared-utils",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc && echo 'Build: shared-utils done!'",
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "eslint": "^8.35.0"
+  }
+}
+
