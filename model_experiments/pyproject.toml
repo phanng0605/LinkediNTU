@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "model-experiments"
+version = "0.1.0"
+description = "This environment is created just for model experimentation"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.11"
+uvicorn = "^0.34.0"
+transformers = "^4.49.0"
+python-dotenv = "^1.0.1"
+nest-asyncio = "^1.6.0"
+gradio = "^5.20.0"
+ipykernel = "^6.29.5"
+torch = "^2.6.0"
+ipywidgets = "^8.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
