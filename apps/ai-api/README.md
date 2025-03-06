@@ -2,14 +2,25 @@
 
 This directory contains the FastAPI app for AI or ML endpoints.
 
-Structure:
-- `app/`:
-  - `main.py`: FastAPI entry point
-  - `routers/`: Organize endpoints
-  - `services/`: Business logic or AI inference code
-- `requirements.txt`: Python dependencies (FastAPI, etc.)
+### Installation
 
-Run locally with:
+We are currently using Poetry as the package manager for this project. To install the dependencies, run the following command:
+
 ```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000
+poetry install
 ```
+
+To activate the virtual environment, run the following command:
+
+```bash
+poetry shell
+```
+
+### Running the app
+
+Haven't touched this part yet so of course it's not working. But the plan is to run the app using the following command:
+
+```bash
+uvicorn app.main:app --reload
+```
+
