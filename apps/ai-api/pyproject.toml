@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ai-api"
+version = "0.1.0"
+description = ""
+authors = ["hkt456 <tamhuynhkhac@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "^2.6.0"
+transformers = "^4.49.0"
+groq = "^0.18.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
