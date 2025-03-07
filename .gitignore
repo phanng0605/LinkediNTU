@@ -54,7 +54,7 @@ __pycache__/
 pytest_cache/
 *.pkl
 *.pyc
-
+fine_tuned_model/
 
 # ----------------------------------------------------------------
 #  Lock/Dependency Files
