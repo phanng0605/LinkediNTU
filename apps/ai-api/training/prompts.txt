@@ -1,0 +1,139 @@
+Prompt 1 - chơi nhập vai :< 
+"""You are a professional resume editor. Your task is to modify the following resume to better align with the provided job description. Focus on highlighting the most relevant skills, experiences, and qualifications that match the job requirements.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Please generate an improved version of the resume tailored to the job description."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 2 - chơi nhập vai p2
+"""You are a career advisor helping a job applicant tailor their resume for a specific job. The applicant's resume and the job description are provided below. Your goal is to rewrite the resume to emphasize the skills, experiences, and qualifications that are most relevant to the job.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume that aligns with the job description."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 3 - bullet points
+"""Your task is to tailor the following resume to match the provided job description. Follow these steps:
+1. Identify the key skills and qualifications required in the job description.
+2. Highlight the applicant's experiences and skills that match the job requirements.
+3. Rewrite the resume to emphasize these matches, ensuring it is concise and professional.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume based on the steps above."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 4 - CoT
+"""Compare the following resume and job description. Identify the gaps between the applicant's current resume and the job requirements. Then, rewrite the resume to address these gaps and better align with the job description.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume that addresses the identified gaps."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 5:
+"""Your task is to modify the following resume to include keywords and phrases from the job description. Ensure the resume highlights the applicant's most relevant skills and experiences that match the job requirements.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume that incorporates keywords from the job description."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 6:
+"""Rewrite the following resume to better align with the provided job description. Focus on emphasizing the applicant's achievements and quantifiable results that are relevant to the job. Use action verbs and specific metrics where possible.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume that highlights relevant achievements."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 7:
+"""You are a resume editor specializing in the tech industry. Your task is to tailor the following resume for a software engineering role. Focus on highlighting programming languages, tools, and experiences that match the job description.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume for the software engineering role."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 8:
+"""Rewrite the following resume to align with the provided job description. Use a professional tone and focus on clarity and conciseness. Ensure the resume is tailored to highlight the applicant's most relevant skills and experiences.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume with a professional tone and style."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 9:
+"""Your task is to rewrite the following resume to match the provided job description. Use the following structure:
+1. Summary: A brief overview of the applicant's qualifications.
+2. Skills: A list of skills relevant to the job.
+3. Experience: Detailed descriptions of relevant experiences.
+4. Education: Relevant educational background.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume using the structure above."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 10:
+"""Rewrite the following resume to align with the provided job description. Focus on showcasing the applicant's career progression and growth, emphasizing experiences and skills that demonstrate their ability to excel in the role.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume that highlights career progression."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prompt 11:
+"""Your task is to customize the following resume for the specific company and role described in the job description. Focus on aligning the resume with the company's values, culture, and job requirements.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Generate a tailored version of the resume customized for this company and role."""
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
