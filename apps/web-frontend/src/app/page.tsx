@@ -8,7 +8,7 @@ import { HowItWorksSection } from "@/components/landing/HowItWorksSection"
 import { AdvancedFeaturesSection } from "@/components/landing/AdvancedFeaturesSection"
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection"
 import { CTASection } from "@/components/landing/CTASection"
-import { FooterSection } from "@/components/landing/FooterSection"
+import { FooterSection } from "@/components/common/FooterSection"
 
 export default function Home() {
   return (
