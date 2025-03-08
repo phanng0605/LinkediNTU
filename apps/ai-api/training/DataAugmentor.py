@@ -43,6 +43,7 @@ class GroqLLMClient:
         )
 
         return response.choices[0].message.content
+
 class ResumeDataAugmentor: 
     def __init__(self, groq_client: GroqLLMClient):
         self.groq_client = groq_client

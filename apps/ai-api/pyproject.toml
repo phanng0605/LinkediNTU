@@ -10,6 +10,15 @@ python = "^3.12"
 torch = "^2.6.0"
 transformers = "^4.49.0"
 groq = "^0.18.0"
+fastapi = "^0.115.11"
+uvicorn = "^0.34.0"
+dotenv = "^0.9.9"
+pypdf2 = "^3.0.1"
+joblib = "^1.4.2"
+pandas = "^2.2.3"
+scikit-learn = "^1.6.1"
+datasets = "^3.3.2"
+accelerate = ">=0.26.0"
 
 
 [build-system]
