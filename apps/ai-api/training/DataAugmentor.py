@@ -43,7 +43,6 @@ class GroqLLMClient:
         )
 
         return response.choices[0].message.content
-
 class ResumeDataAugmentor: 
     def __init__(self, groq_client: GroqLLMClient):
         self.groq_client = groq_client
@@ -97,6 +96,30 @@ class ResumeDataAugmentor:
             "job_description": job_description,
             "tailored_resume": tailored_resume,
         }
+    
+    def tailor_resume(self, resume: str, job_description: str) -> str:
+        # """
+        # Tailor a resume based on user's feed job description.
+        # Args:
+        #     resume (str): The original resume of the job applicant.
+        #     job_description (str): The job description for which the resume is being tailored.
+        # Returns:
+        #     str: The tailored resume for the job applicant.
+        # """
+        prompt = (
+            f"""You are a professional resume editor. Your task is to modify the following sentences in resume to better align with the provided job description. Focus on highlighting the most relevant skills, experiences, and qualifications that match the job requirements.
+
+Resume:
+{resume}
+
+Job Description:
+{job_description}
+
+Please generate an improved version of the resume tailored to the job description."""
+        )
+        print(prompt)
+        tailored_resume = self.groq_client.chat_completion(prompt)
+        return tailored_resume.strip()
 
 def main():
     parser = argparse.ArgumentParser(
@@ -105,32 +128,57 @@ def main():
     parser.add_argument("--role", required=True, help="The job role for which to generate data.")
     parser.add_argument("--num", type=int, default=1, help="Number of resume data entries to generate.")
     parser.add_argument("--output", required=True, help="The output JSON filename (e.g., dataset.json).")
+    parser.add_argument("--custom_input", required=True, default=False, help="Whether to use custom input for resume and job description.")
+    parser.add_argument("--input_path", required=False, default=False, help="Path to input JSON file.")
     args = parser.parse_args()
     
     groq_key = "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"
     groq_client = GroqLLMClient(api_key=groq_key)
     augmentor = ResumeDataAugmentor(groq_client)
     
-    data_entries = []
-    for i in range(args.num):
-        # Generate resume and job description for the role.
-        resume = augmentor.generate_resume(args.role)
-        job_description = augmentor.generate_job_description(args.role)
-        # Augment data to create a tailored resume.
-        augmented_data = augmentor.augment_data(resume, job_description)
-        data_entries.append(augmented_data)
-    
-    output_folder = "data"
-    os.makedirs(output_folder, exist_ok=True)
-    
-    # Create the full output file path.
-    output_file_path = os.path.join(output_folder, args.output)
-    
-    # Write the results to the specified output file as formatted JSON.
-    with open(output_file_path, "w") as outfile:
-        json.dump(data_entries, outfile, indent=2)
-    
-    print(f"Data successfully written to {output_file_path}")
+    if args.custom_input:
+        print("MANUAL MODE")
+        input_file_path = args.input_path
+        print(input_file_path)
+        with open(input_file_path, "r") as infile:
+            data = json.load(infile)
+        print(data[0])
+        data = data[0]
+        resume = data["resume"]
+        job_description = data["job_description"]
+        tailored_resume = augmentor.tailor_resume(resume, job_description)
+        
+        print(f"Tailored Resume: {tailored_resume}")
+        output_folder = "data"
+        os.makedirs(output_folder, exist_ok=True)
+        output_file_path = os.path.join(output_folder, args.output)
+        with open(output_file_path, "w") as outfile:
+            json.dump(tailored_resume, outfile, indent=2)
+        
+        print(f"Data successfully written to {output_file_path}")
+        return
+    else:
+        print("AUTO MODE")
+        data_entries = []
+        for i in range(args.num):
+            # Generate resume and job description for the role.
+            resume = augmentor.generate_resume(args.role)
+            job_description = augmentor.generate_job_description(args.role)
+            # Augment data to create a tailored resume.
+            augmented_data = augmentor.augment_data(resume, job_description)
+            data_entries.append(augmented_data)
+        
+        output_folder = "data"
+        os.makedirs(output_folder, exist_ok=True)
+        
+        # Create the full output file path.
+        output_file_path = os.path.join(output_folder, args.output)
+        
+        # Write the results to the specified output file as formatted JSON.
+        with open(output_file_path, "w") as outfile:
+            json.dump(data_entries, outfile, indent=2)
+        
+        print(f"Data successfully written to {output_file_path}")
 
 if __name__ == "__main__":
     main()

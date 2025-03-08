@@ -1,0 +1,6 @@
+[
+    {
+      "resume": "Machine Learning Intern September 2023 – January 2024 \n Thales Solutions Asia Singapore \n • Conducted object detection training using YOLOX models on a custom dataset to enhance the SMRT system across various scenarios, reducing gate passing time by 20%. \n • Executed training on YOLOv models and data conversion between CocoJSON and TXT, achieved 72% accuracy. \n • Developed scripts for continuous model testing on videos within 48 hours, including video input, frame extraction at a customized FPS rate, timestamp marking, YOLO object detection, and result logging in a timestamped TXT file.",
+      "job_description": "Experience with distributed systems or on-device algorithm development \n Experience in deep learning and PyTorch \nIndustry experience working on projects such as: real-time SLAM and 3D reconstruction, sensor fusion and active depth sensing, object and body tracking and pose estimation, and/or image processing. Image and/or semantic segmentation, 2D and 3D key point estimation and surface reconstruction, depth estimation, generative methods such as GANs, or photorealistic rendering"
+    }
+]

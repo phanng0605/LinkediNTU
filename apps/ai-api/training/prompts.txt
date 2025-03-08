@@ -1,5 +1,5 @@
 Prompt 1 - chơi nhập vai :< 
-"""You are a professional resume editor. Your task is to modify the following resume to better align with the provided job description. Focus on highlighting the most relevant skills, experiences, and qualifications that match the job requirements.
+"""You are a professional resume editor. Your task is to modify the following sentences in resume to better align with the provided job description. Focus on highlighting the most relevant skills, experiences, and qualifications that match the job requirements.
 
 Resume:
 {resume}

@@ -1,0 +1,1 @@
+python3 DataAugmentor.py --role "computer vision engineer" --num 1 --output /Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/custom_gen.json --custom_input True --input_path /Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/input_resume.json
