@@ -107,20 +107,23 @@ class ResumeDataAugmentor:
         # Returns:
         #     str: The tailored resume for the job applicant.
         # """
-        prompt = (
-            f"""You are a professional resume editor. Your task is to modify the following sentences in resume to better align with the provided job description. Focus on highlighting the most relevant skills, experiences, and qualifications that match the job requirements.
-
-Resume:
-{resume}
-
-Job Description:
-{job_description}
-
-Please generate an improved version of the resume tailored to the job description."""
-        )
+        prompt = ()
         print(prompt)
         tailored_resume = self.groq_client.chat_completion(prompt)
         return tailored_resume.strip()
+    
+    def resume_comment(self, section, content) -> str:
+        # """
+        # Provide feedback on a resume.
+        # Args:
+        #     resume (str): The resume to provide feedback on.
+        # Returns:
+        #     str: The feedback on the resume.
+        # """
+        prompt = f"Provide feedback on this section with the following content: \n Section: {section} \n Content: {content}"
+        feedback = self.groq_client.chat_completion(prompt)
+        return feedback.strip()
+    
 
 def main():
     parser = argparse.ArgumentParser(
@@ -134,6 +137,7 @@ def main():
     args = parser.parse_args()
     
     groq_key = "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"
+    gemini_key = "AIzaSyCeEcNoSDQkjQjQxrUCHJjTM4mQFO7zv6E"
     groq_client = GroqLLMClient(api_key=groq_key)
     augmentor = ResumeDataAugmentor(groq_client)
     
