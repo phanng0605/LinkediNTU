@@ -8,9 +8,6 @@ import os
 import argparse
 from groq import Groq
 
-groq_key = "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"
-gemini_key = "AIzaSyCeEcNoSDQkjQjQxrUCHJjTM4mQFO7zv6E"
-
 class ResumeAnalyser:
     def __init__(self, api_key):
         self.api_key = api_key
