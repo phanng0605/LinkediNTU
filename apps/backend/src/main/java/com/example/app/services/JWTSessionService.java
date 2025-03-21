@@ -11,6 +11,8 @@ public interface JWTSessionService {
 
     public Mono<JWTSession> createSession(Account user, boolean rememberMe) throws ServiceException, ModelException;
 
+    public Mono<JWTSession> createSession(Account user, Long expiresAt) throws ServiceException, ModelException;
+
     public Mono<JWTSession> getSession(String token) throws ServiceException, ModelException;
 
     public Mono<JWTSession> validateSession(String token) throws ServiceException, ModelException;

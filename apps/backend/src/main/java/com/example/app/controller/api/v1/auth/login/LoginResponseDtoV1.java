@@ -1,8 +1,8 @@
-package com.example.app.controller.api.auth.login;
+package com.example.app.controller.api.v1.auth.login;
 
 import com.example.app.models.Account;
 
-public class LoginV1ResponseDto {
+public class LoginResponseDtoV1 {
     private String token;
     private Account.Role role;
     private String username;
@@ -24,22 +24,22 @@ public class LoginV1ResponseDto {
         return email;
     }
 
-    public LoginV1ResponseDto setToken(String token) {
+    public LoginResponseDtoV1 setToken(String token) {
         this.token = token;
         return this;
     }
 
-    public LoginV1ResponseDto setRole(Account.Role role) {
+    public LoginResponseDtoV1 setRole(Account.Role role) {
         this.role = role;
         return this;
     }
 
-    public LoginV1ResponseDto setUsername(String username) {
+    public LoginResponseDtoV1 setUsername(String username) {
         this.username = username;
         return this;
     }
 
-    public LoginV1ResponseDto setEmail(String email) {
+    public LoginResponseDtoV1 setEmail(String email) {
         this.email = email;
         return this;
     }

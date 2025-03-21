@@ -7,9 +7,10 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/")
-public class RunController {
+public abstract class RunController {
     @GetMapping("/")
-    public Mono<String> home() {
+    public Mono<String> get() {
         return Mono.just("Cristiano Ronaldo");
     }
+
 }

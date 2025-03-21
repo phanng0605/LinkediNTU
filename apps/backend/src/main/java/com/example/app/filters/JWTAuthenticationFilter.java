@@ -2,17 +2,15 @@ package com.example.app.filters;
 
 import com.example.app.exceptions.ModelException;
 import com.example.app.exceptions.ServiceException;
-import com.example.app.models.JWTSession;
 import com.example.app.services.JWTSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
-
-import org.springframework.stereotype.Component;
 
 @Component
 public class JWTAuthenticationFilter implements WebFilter {
@@ -27,10 +25,8 @@ public class JWTAuthenticationFilter implements WebFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         String path = exchange.getRequest().getPath().toString();
-
-        path = path + '/';
         // Apply only to "/api/*"
-        if (path.startsWith("/api/") && !path.startsWith("/api/auth/")) {
+        if (path.matches("^/api/v[^/]+(/.*)?") && !path.matches("^/api/v[^/]+/auth(/.*)?")) {
             String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
 
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
@@ -42,6 +38,7 @@ public class JWTAuthenticationFilter implements WebFilter {
 
             try {
                 return jwtSessionService.validateSession(token).flatMap(session -> {
+                    System.out.println("Session: " + session);
                     if (session == null) {
                         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
                         return exchange.getResponse().setComplete();

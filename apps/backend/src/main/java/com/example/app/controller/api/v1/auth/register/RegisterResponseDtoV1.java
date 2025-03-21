@@ -1,6 +1,7 @@
-package com.example.app.controller.api.auth.register;
+package com.example.app.controller.api.v1.auth.register;
 
-public class RegisterV1ResponseDto {
+
+public class RegisterResponseDtoV1  {
     private String firstname;
     private String lastname;
     private String username;
@@ -22,22 +23,22 @@ public class RegisterV1ResponseDto {
         return email;
     }
 
-    public RegisterV1ResponseDto setUsername(String username) {
+    public RegisterResponseDtoV1 setUsername(String username) {
         this.username = username;
         return this;
     }
 
-    public RegisterV1ResponseDto setEmail(String email) {
+    public RegisterResponseDtoV1 setEmail(String email) {
         this.email = email;
         return this;
     }
 
-    public RegisterV1ResponseDto setFirstname(String firstname) {
+    public RegisterResponseDtoV1 setFirstname(String firstname) {
         this.firstname = firstname;
         return this;
     }
 
-    public RegisterV1ResponseDto setLastname(String lastname) {
+    public RegisterResponseDtoV1 setLastname(String lastname) {
         this.lastname = lastname;
         return this;
     }

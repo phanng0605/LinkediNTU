@@ -1,12 +1,8 @@
 package com.example.app.models;
 
-import com.example.app.controller.api.auth.register.RegisterV1RequestDto;
 import com.example.app.utils.SHA256Hash;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Document(collection = "accounts") // Specifies MongoDB collection name
 public class Account {
@@ -24,10 +20,13 @@ public class Account {
     private String password;
     private String salt = SHA256Hash.generateSalt();;
     private Role role;
+    private Long lastLogout;
 
-    public Account() {}
+    public Account() {
+    }
 
-    public Account(String username, String firstname, String lastname, String email, String password, String salt, Role role) {
+    public Account(String username, String firstname, String lastname, String email, String password, String salt,
+            Role role) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -65,6 +64,10 @@ public class Account {
         return salt;
     }
 
+    public Long getLastLogout() {
+        return lastLogout;
+    }
+
     public Role getRole() {
         return role;
     }
@@ -99,6 +102,10 @@ public class Account {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public void setLastLogout(Long lastLogout) {
+        this.lastLogout = lastLogout;
     }
 
 }
