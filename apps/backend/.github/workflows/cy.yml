@@ -1,0 +1,34 @@
+name: Java CI
+
+on: [push, pull_request]
+
+env:
+  PAYOS_CHECKSUM_KEY: ${{ secrets.PAYOS_CHECKSUM_KEY }}
+  PAYOS_CLIENT_ID: ${{ secrets.PAYOS_CLIENT_ID }}
+  PAYOS_API_KEY: ${{ secrets.PAYOS_API_KEY }}
+  DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+  DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
+  DATABASE_ADMIN: ${{ secrets.DATABASE_ADMIN }}
+  DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+  GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
+  GOOGLE_BOOKS_API_URL: ${{ secrets.GOOGLE_BOOKS_API_URL }}
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  ENDPOINT_URL: ${{ secrets.ENDPOINT_URL }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v1
+        with:
+          java-version: '17'
+      - name: Build with Maven
+        run: mvn spring-boot:run
+      - name: Linting
+        run: mvn formatter:validate
+      - name: Run tests
+        run: mvn test

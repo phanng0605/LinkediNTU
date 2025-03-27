@@ -4,18 +4,13 @@ import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Eye, EyeOff } from "lucide-react"
 
-interface PasswordInputProps {
-  id: string
-  placeholder?: string
-  required?: boolean
-}
 
-export default function PasswordInput({ id, placeholder = "••••••••", required = true }: PasswordInputProps) {
+export default function PasswordInput({ id, placeholder = "••••••••", required = true, ...props }: React.ComponentProps<"input">) {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
     <div className="relative">
-      <Input id={id} type={showPassword ? "text" : "password"} placeholder={placeholder} required={required} />
+      <Input id={id} type={showPassword ? "text" : "password"} placeholder={placeholder} required={required} {...props}/>
       <button
         type="button"
         className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"

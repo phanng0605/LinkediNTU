@@ -12,19 +12,61 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Separator } from "@/components/ui/separator"
 import PasswordInput from "./password-input"
 import SocialButtons from "./social-buttons"
+import CryptoJS from "crypto-js"
+import Response from "@/interfaces/response"
+import LoginResponse from "@/interfaces/loginResponse"
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false)
-      // Handle login logic here
-    }, 1500)
-  }
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      
+      setIsLoading(true);
+      // Simulate API call
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      const email = formData.get("email") as string;
+      const password = formData.get("password") as string;
+      const rememberLogin = formData.get("remember") === "on";
+
+      
+      const hashedPassword = CryptoJS.SHA256(password).toString();
+      console.log({ email, hashedPassword, rememberLogin });
+
+      fetch(`/api/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+          'email': email,
+          'password': hashedPassword,
+          'rememberMe': rememberLogin
+         })
+      }).then(response => {
+        return response.json()
+      }).then(data => {
+        console.log(data as Response<LoginResponse>)
+        if (data.status === "SUCCESS") {
+          console.log(data.data);
+          alert("Login successfully");
+          (async () => {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            // window.location.href = "/";
+          })();
+        } else {
+          alert("An error occurred: " + data.message);
+        }
+      }).catch((error) => {
+        console.error('Error:', error);
+        setIsLoading(false);
+        alert("An error occurred: " + error)
+      }).finally(() => {
+        setIsLoading(false);
+      });
+      
+    }
 
   return (
     <Card>
@@ -36,7 +78,7 @@ export default function LoginForm() {
         <form onSubmit={handleLogin} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="your.name@e.ntu.edu.sg" required />
+            <Input id="email" type="email" name="email" placeholder="your.name@e.ntu.edu.sg" required />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -45,10 +87,10 @@ export default function LoginForm() {
                 Forgot password?
               </Link>
             </div>
-            <PasswordInput id="password" />
+            <PasswordInput id="password" name="password" />
           </div>
           <div className="flex items-center space-x-2">
-            <Checkbox id="remember" />
+            <Checkbox id="remember" name="remember"/>
             <Label htmlFor="remember" className="text-sm">
               Remember me for 30 days
             </Label>
@@ -79,7 +121,7 @@ export default function LoginForm() {
           <button
             type="button"
             className="text-primary hover:underline"
-            onClick={() => document.querySelector('[data-value="signup"]')?.click()}
+            onClick={() => (document.querySelector('[data-value="signup"]') as HTMLElement)?.click()}
           >
             Sign up
           </button>

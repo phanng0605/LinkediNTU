@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: app
+  profiles:
+    active: default
+  data:
+    mongodb:
+      uri: mongodb+srv://${DB_USER_NAME}:${DB_PASSWORD}@cluster0.3hd7fof.mongodb.net/?retryWrites=true&w=majority&appName=${DB_APP_NAME}
+      database: ${DB_NAME}
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          reactive:
+            function:
+              client: DEBUG
+    io:
+      netty: DEBUG
+
+security:
+  jwt:
+    token:
+      secret-key: ${JWT_SECRET_KEY}
