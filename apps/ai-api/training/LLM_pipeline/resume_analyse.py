@@ -33,12 +33,13 @@ class ResumeAnalyser:
 
 if __name__ == "__main__":
     pdf_path = "/Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/PhanResumeML.pdf"
+    parsed_output = "/Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/processed_resume/phan_parsed_resume.json"
+    feedback_output_path = "/Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/feedback/phan_resume_feedback.json"
     analyser = ResumeAnalyser(groq_key)
-    resume_feedback = analyser.analyse_resume(pdf_path, "/Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/processed_resume/phan_rem.json")
-    output_path = "/Users/trongphan/Desktop/LinkediNTU/apps/ai-api/training/data/feedback/phan_feedback.json"
-    with open(output_path, "w") as f:
+    resume_feedback = analyser.analyse_resume(pdf_path, parsed_output)
+    with open(feedback_output_path, "w") as f:
         json.dump(resume_feedback, f, indent=4)
-    print(f"Feedback written to {output_path}")
+    print(f"Feedback written to {feedback_output_path}")
     
 # run this script to get the feedback of the resume
 # cd /LinkediNTU/apps/ai-api/training/

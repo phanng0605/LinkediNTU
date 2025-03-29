@@ -1,0 +1,123 @@
+{
+  "contact_info": {
+    "name": "Nguyen Trong Phan",
+    "email": "phannguyentrong95@gmail.com",
+    "phone": "(+65)91304300",
+    "LinkedIn": "linkedin.com/phannguyen0605"
+  },
+  "work_experience": [
+    {
+      "company": "TikTok (ByteDance) Singapore",
+      "role": "Algorithm Engineer Intern",
+      "duration": "May 2024 \u2013 Dec 2024",
+      "achievements": [
+        "Developed and optimized algorithmic solutions for product profiling by creating a new algorithm that utilizes an embedding model for candidate retrieval. This was further enhanced by fine-tuning with a Siamese network using triplet loss, achieving a 95% accuracy rate for the top 30 retrieved candidates.",
+        "Integrated and deployed the attribute normalization service across the entire attribute service, which involves constructing thrift files and connecting the client and server to test performance and latency. This integration achieved 87% accuracy and improved the service\u2019s Queries Per Second (QPS) by 200%.",
+        "Developed a pipeline leveraging the Multimodal Large Language Model (InternVL2) to align product categories, properties, and values across diverse e-commerce platforms, ensuring consistency in business data. This achieved 95% alignment accuracy and 0.94 F1 score, demonstrating high precision and recall in product information matching"
+      ]
+    },
+    {
+      "company": "Thales Solutions Asia Singapore",
+      "role": "Machine Learning Intern",
+      "duration": "September 2023 \u2013 January 2024",
+      "achievements": [
+        "Conducted object detection training using YOLOX models on a custom dataset to enhance the SMRT system across various scenarios, reducing gate passing time by 20%.",
+        "Executed training on YOLOv models and data conversion between CocoJSON and TXT, achieved 72% accuracy.",
+        "Developed scripts for continuous model testing on videos within 48 hours, including video input, frame extraction at a customized FPS rate, timestamp marking, YOLO object detection, and result logging in a timestamped TXT file."
+      ]
+    },
+    {
+      "company": "A*STAR - Agency for Science, Technology and Research Singapore",
+      "role": "AI & ML Intern",
+      "duration": "May 2023 \u2013 August 2023",
+      "achievements": [
+        "Researched project \u201dQuestion Tagging using Knowledge and Causal Inference\u201d under guidance of Dr. Zhou Nina.",
+        "Analyzed and evaluated Language Models (LLMs), including LLaMa, Alpaca-Lora, and RoBERTa, by conducting local loading and testing with personal data, which involved data cleaning and preprocessing.",
+        "Analyzed text sentiment using Sentence-Transformer, map questions to outcomes and topics achieved 86% accuracy."
+      ]
+    },
+    {
+      "company": "Nanyang Technological University Singapore",
+      "role": "Research Assistant",
+      "duration": "March 2023 \u2013 May 2023",
+      "achievements": [
+        "Conducted onsite traffic data collection utilizing manual counting and video surveillance methodologies.",
+        "Processed, analyzed, and annotated over 2000 images extracted from video footage in Pick-Up and Drop-Off zones.",
+        "Enhanced the YOLOv5 architecture to output object bounding boxes and re-identification attributes by refactoring loss functions, data loaders, network configurations of YOLOv5, achieve over 80% accuracy with 0.8 IoU threshold."
+      ]
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": [
+      "Java",
+      "Python",
+      "C/C++",
+      "SQL",
+      "JavaScript",
+      "TypeScript",
+      "R",
+      "HTML/CSS"
+    ],
+    "frameworks": [
+      "PyTorch",
+      "Scikit-learn",
+      "TensorFlow",
+      "Keras",
+      "Streamlit",
+      "LangChain",
+      "NextJS",
+      "NodeJS",
+      "ExpressJS",
+      "ReactJS"
+    ],
+    "developer_tools": [
+      "Git",
+      "Docker",
+      "Google Cloud Platform",
+      "PyCharm",
+      "IntelliJ",
+      "AWS",
+      "Supabase",
+      "MongoDB",
+      "Postgresql"
+    ],
+    "libraries": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "pyfolio",
+      "backtrader",
+      "yfinance",
+      "altair",
+      "SciPy",
+      "Flask",
+      "FastAPI",
+      "OpenCV"
+    ],
+    "other": [
+      "PowerBI",
+      "PowerQuery",
+      "Excel"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Computing in Computer Science",
+      "university": "Rice University",
+      "year": "01/2025 - 06/2025"
+    },
+    {
+      "degree": "Bachelor of Computing in Computer Science with Minor in Risk Analytics",
+      "university": "Nanyang Technological University",
+      "year": "06/2022 - 06/2026"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Facial Recognition Attendance System with Real-Time Database Integration",
+      "description": "Developed a robust facial recognition algorithm to identify and verify preloaded students achieved 95% accuracy. Integrated with a real-time database ensured instant storage of attendance records, reducing manual errors by 80%.",
+      "technologies": []
+    }
+  ]
+}
