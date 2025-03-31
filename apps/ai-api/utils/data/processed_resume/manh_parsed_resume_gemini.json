@@ -1,0 +1,169 @@
+{
+  "contact_info": {
+    "name": "Le Duc Manh",
+    "email": "C230183@e.ntu.edu.sg",
+    "phone": "84365896",
+    "LinkedIn": "https://www.linkedin.com/in/manh-le-72593027b/"
+  },
+  "work_experience": [],
+  "technical_skills": {
+    "programming_languages": [
+      "Python",
+      "Go",
+      "Java",
+      "C",
+      "C++",
+      "R",
+      "SQL"
+    ],
+    "web_development": [
+      "Spring Boot",
+      "RESTful APIs",
+      "Maven"
+    ],
+    "devops_cloud": [
+      "Docker",
+      "Kubernetes",
+      "AWS (EC2, Linux)",
+      "ArgoCD",
+      "Nginx"
+    ],
+    "ci_cd_automation": [
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "Jenkins"
+    ],
+    "version_control": [
+      "Git",
+      "GitHub"
+    ],
+    "operating_systems": [
+      "Linux (Ubuntu, CentOS)",
+      "Windows Server"
+    ],
+    "scripting_tools": [
+      "Bash",
+      "Shell",
+      "Jupyter Notebook"
+    ],
+    "networking_security": [
+      "Nginx reverse proxy",
+      "Load Balancing",
+      "TLS/SSL Configuration"
+    ],
+    "databases": [
+      "PostgreSQL"
+    ],
+    "testing": [
+      "J unit",
+      "PyTest"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Engineering (Honours), Computer Science",
+      "university": "NANYANG TECHNOLOGICAL UNIVERSITY, SINGAPORE",
+      "year": "Jul 2023 \u2013 May 2027"
+    }
+  ],
+  "projects": [
+    {
+      "name": "CI/CD Pipeline for DevOps (Jenkins, Docker, Kubernetes, ArgoCD, Nginx)",
+      "description": "Developed an automated CI/CD pipeline using Jenkins to streamline application deployment.",
+      "technologies": [
+        "Jenkins",
+        "Docker",
+        "Kubernetes",
+        "ArgoCD",
+        "Nginx"
+      ],
+      "duration": "Dec 2024 \u2013 Feb 2025",
+      "achievements": [
+        "Developed an automated CI/CD pipeline using Jenkins to streamline application deployment.",
+        "Built Docker images with multi-stage builds and deployed them in a Kubernetes cluster using Helm charts.",
+        "Integrated ArgoCD for GitOps, reducing manual deployment steps and improving infrastructure management.",
+        "Used SonarQube for security analysis, reducing potential vulnerabilities in the software development lifecycle.",
+        "Configured Nginx as a reverse proxy for security and traffic management."
+      ]
+    },
+    {
+      "name": "Spring Boot Web Application (Java, Spring Boot, Maven, PostgreSQL)",
+      "description": "Designed and developed a web application using Java and Spring Boot, following MVC architecture.",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Maven",
+        "PostgreSQL"
+      ],
+      "duration": "Dec 2024 \u2013 Jan 2025",
+      "achievements": [
+        "Designed and developed a web application using Java and Spring Boot, following MVC architecture.",
+        "Implemented RESTful APIs for user authentication, task management, and data retrieval.",
+        "Integrated PostgreSQL as the database for efficient data storage and retrieval.",
+        "Used Maven for dependency management and build automation.",
+        "Secured APIs with JWT authentication and Spring Security to protect user data.",
+        "Deployed the application using Docker and Kubernetes for scalability and maintainability."
+      ]
+    },
+    {
+      "name": "Task Tracker CLI (Python & PostgreSQL)",
+      "description": "Built a CLI -based task tracker for managing tasks and automating reminders.",
+      "technologies": [
+        "Python",
+        "PostgreSQL"
+      ],
+      "duration": "Oct 2024 - Dec 2024",
+      "achievements": [
+        "Built a CLI -based task tracker for managing tasks and automating reminders.",
+        "Implemented a database -backed task storage system using PostgreSQL for efficient data management.",
+        "Designed and developed automation features, including task categorization and notification alerts.",
+        "Integrated logging and error handling for better debugging and maintenance.",
+        "Used GitHub Actions for continuous integration and deployment, ensuring robust software updates.",
+        "Developed and implemented unit tests using PyTest to validate task operations and ensure robustness."
+      ]
+    }
+  ],
+  "leadership_experience": [
+    {
+      "role": "Vice \u2013 Captain",
+      "organization": "NTU ACES Cheerleading",
+      "duration": "April 2024 - Present",
+      "achievements": [
+        "Led a team of 40+ athletes and coordinated 10+ training sessions for NTU ACES Cheerleading .",
+        "Organized logistics and competition strategies for varsity -level performances.",
+        "Developed leadership, communication, and crisis management skills through high -pressure events"
+      ]
+    },
+    {
+      "role": "Hall Cluster leader",
+      "organization": "Vietnamese Community in NTU (VNNTU - SIC Vietnam)",
+      "duration": "Aug 2024 - Oct 2024",
+      "achievements": [
+        "Led a team of 20 members in organizing and directing a play for the VNNTU 4 -Season event.",
+        "Managed scriptwriting, stage design, and team coordination to ensure a successful performance.",
+        "Developed leadership, project management, and public speaking skills while overseeing rehearsals and event execution."
+      ]
+    },
+    {
+      "role": "Head of Orientation",
+      "organization": "Freshman Orientation Camp 2024 (FOC\u201924)",
+      "duration": "Aug 2023 \u2013 Aug 2024",
+      "achievements": [
+        "Led the orientation program, assisting potential candidates in applying to NTU.",
+        "Provided mentorship and support to Vietnamese freshmen, helping them navigate school admissions and adapt to life in Singapore.",
+        "Organized campus tours, networking sessions, and resource -sharing events to ease student transitions.",
+        "Strengthened leadership, public speaking, and event management skills."
+      ]
+    }
+  ],
+  "achievements_awards_honours": [
+    {
+      "name": "Consolation Prize in Vietnamese Physics Olympiad(VphO)",
+      "year": "2022 -2023"
+    },
+    {
+      "name": "Champions representing NTU Cheerleading in CASNCC 2024 (varsity category )",
+      "year": "2024"
+    }
+  ]
+}
